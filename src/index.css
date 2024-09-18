@@ -72,6 +72,8 @@
     border-radius: 5px;
     background-color: #fff;
     margin: 20px auto 50px auto;
+    position: relative;
+    top: 5px;
 }
 
 .auth-container h2 {
@@ -177,7 +179,6 @@ button[type="submit"]:hover {
 
 /* HEADER */
 /* Header overlay */
-
 .overlay {
     position: absolute;
     top: 0;
@@ -185,16 +186,28 @@ button[type="submit"]:hover {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
+    /* Semi-transparent overlay */
 }
 
+/* Overlay content centered */
 .overlay-content {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    /* This moves the content to the center */
     color: #fff;
-    justify-content: flex-start;
+    display: flex;
+    flex-direction: column;
+    /* Align items vertically */
+    justify-content: center;
+    /* Center the content vertically */
+    align-items: center;
+    /* Center the content horizontally */
+    text-align: center;
+    /* Ensure text is centered */
 }
+
 
 /* The header banner */
 .header-banner {
@@ -203,6 +216,7 @@ button[type="submit"]:hover {
     background-position: center;
     position: relative;
     height: 80vh;
+    overflow: hidden;
 }
 
 .header-banner {
@@ -231,6 +245,7 @@ button[type="submit"]:hover {
     margin-bottom: 10px;
     padding: 20px;
     margin-left: 45px;
+    justify-content: center;
 }
 
 
@@ -1124,6 +1139,8 @@ h2 {
         border-radius: 0;
         border: none;
         padding: 10px;
+        position: relative;
+        top: 150px;
     }
 
     .auth-container h2 {
